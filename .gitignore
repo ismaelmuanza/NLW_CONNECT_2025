@@ -4,3 +4,5 @@ node_modules
 coverage
 api
 maio-menor
+src/server copy
+prisma/migrations

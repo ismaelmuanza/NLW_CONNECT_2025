@@ -1,0 +1,62 @@
+import { beforeEach, describe, expect, it} from 'vitest'
+import { InMemoryRedisRepository } from '@/repositories/in-memory-redis-repository'
+import { AcessInviteLinkUseCase } from './acess-invite-link-use-case'
+
+describe ('Acess Invite Link Test', () => {
+
+    let redisRepository: InMemoryRedisRepository
+    // let sut:AcessInviteLinkUseCase
+    
+    beforeEach(() => {
+        redisRepository = new InMemoryRedisRepository()
+        // sut = new AcessInviteLinkUseCase(redisRepository)
+    })
+
+    it('should be able to send a invite', async () => {
+
+
+        const referer = await redisRepository.hincrby('acess-invite-link', 'user-1', 1)
+        redisRepository.hincrby('acess-invite-link', 'user-1', 10)
+        redisRepository.hincrby('acess-invite-link', 'user-1', 1)
+        
+
+
+        // expect(reference.nameHash).toEqual(expect.any(String))
+        expect(referer.field).toEqual('user-1')
+
+        console.log(redisRepository.store)
+
+    })
+})
+
+
+------------
+
+
+import { HcrbyRequest, InMemoryRedisRepositoryInterface } from "./interface/in-memory-redis-repository-interface";
+
+
+export class InMemoryRedisRepository {
+
+    public store: Record<string, Record<string, number>> = {}
+
+    hincrby (hash: string, field: string, increment: number) {
+        if(!this.store[hash]) {
+            this.store[hash] = {}
+        }
+
+        if(!this.store[hash][field]) {
+            this.store[hash][field] = 0
+        }
+
+        this.store[hash][field] += increment
+
+        return {
+            hash,
+            field,
+            value: this.store[hash][field]
+        }
+    }
+
+
+}
