@@ -26,10 +26,21 @@ Este comando irá gerar as migrations automaticamente, ou seja, irá criar as ta
 >  
 > ⚠️ **Atenção:** É necessário ter o **Docker** instalado na sua máquina para utilizar o PostgreSQL via container.
 
-
 ##### Para executar/inicializar o redis utilize:
     docker-compose start 
-##### Se quiser Parar o redis utilize
+##### Se quiser Parar o redis(os containers) utilize
     docker-compose stop 
+
+### 5 - Inicializar a aplicação
+    npm run start:dev
+
+### 📘 Documentação da API
+
+Após inicializar a aplicação, acesse a rota: `/docs`<br>
+
+> 🧪 Lá você encontrará uma **interface gráfica** para testar todas as rotas da API diretamente no navegador.
+
+Essa interface facilita o entendimento da estrutura da API, permitindo enviar requisições `GET`, `POST`, `PUT`, `DELETE` e visualizar respostas de forma prática.
+
 
 
