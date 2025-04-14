@@ -11,7 +11,7 @@
 
 ### 3 - Rode o comando
     npx prisma migrate dev
-Este comando irá gerar as migrations automaticamente, ou seja, irá criar as tabelas necessárias no banco de daods, de forma automática
+Este comando irá gerar as migrations automaticamente, ou seja, irá criar as tabelas necessárias no banco de dados, de forma automática
 
 ### 4 - Rode o comando
     docker-compose up
