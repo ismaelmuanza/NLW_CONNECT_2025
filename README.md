@@ -18,12 +18,12 @@ Este comando irá gerar as migrations automaticamente, ou seja, irá criar as ta
 ###### Este comando será responsável por fazer o download do Banco Redis
 
 > 💡 **Dica Opcional:**  
-> Apesar de o **PostgreSQL** estar incluído no arquivo `Dockerfile`, ele **não é uma dependência obrigatória** para este projeto.  
+> Apesar de o **PostgreSQL** estar incluído no arquivo `docker-compose.yml`, ele **não é uma dependência obrigatória** para este projeto.  
 > Atualmente, este projeto utiliza o **SQLite** como banco de dados padrão.  
 >  
 > 🔄 Se preferir usar o **PostgreSQL**, basta alterar o `provider` no arquivo `schema.prisma` de `sqlite` para `postgres`.  
 > Isso **gerará automaticamente** uma nova URL do PostgreSQL no arquivo `.env`.  
->  Caso não queira utilizar o postgresSql, pôde deletá-lo do arquivo `Dockerfile`
+>  Caso não queira utilizar o postgresSql, pôde deletá-lo do arquivo `docker-compose.yml`
 > 
 > ⚠️ **Atenção:** É necessário ter o **Docker** instalado na sua máquina para utilizar o PostgreSQL via container.
 
