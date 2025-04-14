@@ -1,7 +1,7 @@
 
 ⚠️ ** Atenção: Leia bem as instruções abaixo para poder rodar o projeto sem problemas **  <br>
 
-## Passos para utilizar:
+## Passos a utilizar:
 
 ### 1 - Baixe o Repositório
 
