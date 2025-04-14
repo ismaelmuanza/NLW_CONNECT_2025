@@ -23,7 +23,7 @@ Este comando irá gerar as migrations automaticamente, ou seja, irá criar as ta
 >  
 > 🔄 Se preferir usar o **PostgreSQL**, basta alterar o `provider` no arquivo `schema.prisma` de `sqlite` para `postgres`.  
 > Isso **gerará automaticamente** uma nova URL do PostgreSQL no arquivo `.env`.  
->  Caso não queria utilizar o postgres, pôde deletar do arquivo `Dockerfile`
+>  Caso não queira utilizar o postgresSql, pôde deletá-lo do arquivo `Dockerfile`
 > 
 > ⚠️ **Atenção:** É necessário ter o **Docker** instalado na sua máquina para utilizar o PostgreSQL via container.
 
